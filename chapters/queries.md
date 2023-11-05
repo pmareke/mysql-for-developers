@@ -135,5 +135,14 @@
 - The `COUNT(if_statement)` function allows us to count values based on a specified condition.
     - An alternative approach is to use the `SUM()` function instead.
 
+## Dealing with NULLs
+
+- To account for null values, we can use the null-safe equal operator `<=>`, also known as the "spaceship operator".
+- To compare a column with a null value, we can use the `is null` or `is not null` operators.
+- To represent null values in our queries we can use the `ifnull` statement.
+    - Alternatively, we can use the `coalesce` function.
+    - This function returns the first non-null value in a list of values.
+
+
 
 
