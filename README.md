@@ -234,6 +234,23 @@ in the terminal.
 - A function-based index is created by applying a function to one or more columns of a table, and then creating an index on the results of that function.
 - Function-based indexes are particularly useful in scenarios where the thing that you're trying to index is not a column, but rather the result of some set of operations or functions.
 
+### Indexing JSON columns
+
+- MySQL provides two viable methods to index specific keys out of a JSON blob:
+    - Generating a column.
+    - Creating a function-based index.
+- You can't just index a JSON blob because MySQL doesn't support indexing JSON blobs.
+
+### Indexing for wildcard searches
+
+- MySQL can only use an index up until it reaches a wildcard character, such as %.
+- MySQL cannot use an index when a wildcard character is at the beginning of a search string.
+- While B-tree indexes work well for wildcard searches at the end of a search string, they may not be sufficient for more complex text searches.
+    - In these cases, we can use a full text index.
+- Full text indexes allow us to search for specific words or phrases within a larger text column with much greater efficiency than using a simple wildcard search.
+
+### Fulltext indexes
+
 ## Queries
 
 ## Examples
