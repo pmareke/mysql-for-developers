@@ -105,7 +105,25 @@ in the terminal.
 
 ### Dates
 
+- There are five different types you can use to store time-related data in MySQL:
+    - `DATE`: If you only need to store the date.
+    - `DATETIME`: If you need to store both the date and time (eight-byte data type).
+    - `TIMESTAMP`: Same as `DATETIME` but with only four bytes.
+        - It can store only from the year 1970 to 2038-01-19.
+    - `YEAR`: If you need to store a year between 1901 and 2155.
+    - `TIME`: Data type is used to store hours, minutes, and seconds.
+- `DATETIME` does not handle time zones at all.
+- `TIMESTAMP` tries to convert values to UTC when added to the database and back to your time zone when retrieved.
+
 ### JSON
+
+- MySQL has proper first-party support for `JSON`.
+- When working with JSON data, MySQL is much more strict than with other text data types.
+- The `->>` operator is used to extract a JSON object at a specific path.
+- `JSON` columns cannot be directly indexed.
+- You can create an index on a specific key within a JSON object, but not on the entire object itself.
+- `JSON` column might make sense when you're storing payloads.
+- One caveat when using `JSON` columns is that they can be quite heavy.
 
 ### Unexpected types
 
