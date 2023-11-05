@@ -251,6 +251,34 @@ in the terminal.
 
 ### Fulltext indexes
 
+- To add a full-text index to a table in MySQL, you can use an ALTER TABLE statement.
+- The use of the `FULLTEXT` keyword to create a full-text index instead of a regular B-tree index.
+- By default, full-text searches in MySQL are done in natural language mode.
+- For more advanced full-text searches, you can switch to boolean mode.
+    - Boolean mode allows you to use modifiers, like `+, -, >, <` and parentheses in your search query
+- When using natural language mode, MySQL automatically orders the results by their relevancy score.
+- MySQL returns the relevancy score as part of the search query results.
+
+### Invisible indexes
+
+- Making an index invisible allows you to monitor how your queries perform without the index without having to rebuild it.
+    - If everything goes well, you can drop the index.
+- Making an index invisible reduces the risks and potential complications of dropping an index.
+- Making an index invisible enables you to test your queries without risking data loss or any adverse impact on system performance. 
+
+### Duplicate indexes
+
+- It's important to note that removing a redundant index can have unintended consequences, especially if you depend on the ordering of the rows in that index.
+- To prevent duplicate indexes from occurring in the first place, it's important to keep an eye out for indexes that have overlapping leftmost prefixes.
+
+### Foreign Keys
+
+- A foreign key is a column or set of columns in a table that references the primary key of another table.
+- A foreign key constraint is a condition that ensures the referential integrity of the data by enforcing a relationship between the foreign key and the referenced primary key.
+- Constraints also require additional computation to maintain.
+- Foreign keys are an important tool for maintaining relationships and ensuring the integrity of data in a relational database.
+- By linking tables together and enforcing referential integrity, foreign keys help ensure consistency and accuracy in data management.
+
 ## Queries
 
 ## Examples
