@@ -195,6 +195,32 @@ in the terminal.
 - Indexes can also be used to sort rows instead of having MySQL do a full table scan (`sort`).
 - Indexes can also be used to group rows together for an aggregate function (`group by`).
 
+### Indexes Selectivity
+
+- **Cardinality** refers to the number of distinct values in a particular column that an index covers.
+- **Selectivity**, on the other hand, refers to how unique the values in a column are.
+
+### Prefix indexes
+
+- By indexing just a part of a string column, you can make the index much smaller and faster.
+- Prefix indexing is especially suitable for long, evenly distributed, and unique strings, such as UUIDs and hashes.
+- To determine the prefix length of a column to index, we have to calculate the overall selectivity of the column and compare it to the selectivity of the prefix.
+    - As you increase the prefix length of columns values, we'll notice that the selectivity will also increase.
+- Prefix indexes are not suitable for ordering or grouping.
+    - The index does not contain the full string value, and therefore cannot be used.
+
+### Composite indexes
+
+- Composite indexes cover multiple columns instead of having individual indexes on each column.
+- There are two main rules for using composite indexes:
+    - **Left-to-right**, no skipping.
+    - **Stops at the first range**.
+- Tips for defining composite indexes:
+    - Equality conditions that are commonly used would be good candidates for being first in a composite index.
+    - Range conditions or less frequently used columns would be better candidates for ordering later in the composite index.
+
+### Covering indexes
+
 ## Queries
 
 ## Examples
