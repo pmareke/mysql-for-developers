@@ -48,7 +48,7 @@ in the terminal.
 ### Strings
 
 - There are many different types to choose from. Here's a list of the different types:
-    `- CHAR`
+    - `CHAR`
     - `VARCHAR`
     - `TINYTEXT`
     - `TEXT`
