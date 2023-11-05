@@ -116,3 +116,24 @@
 
 ## Unions
 
+- A `UNION` query is used to combine the results of two or more SELECT statements into a single result set. 
+- Bear in mind that **the number of columns in all SELECT statements must be the same**.
+- Use `UNION ALL` instead of `UNION` to prevent MySQL from eliminating duplicate rows.
+
+## Sorting and Limiting
+
+- Sorting your rows is not free.
+- It can take a significant amount of resources and time to sort large data sets.
+- If you don't need your rows in a certain order, don't order them.
+- To make the sorting deterministic, you should add more columns to the `ORDER BY` clause.
+- It's important to note that when you use the `OFFSET` clause, the sorted result must be produced first.
+
+##  Counting results
+
+- To count the number of rows in a table use the `COUNT(*)` function.
+- To count the number of non-null values in a column use the `COUNT(column_name)` function.
+- The `COUNT(if_statement)` function allows us to count values based on a specified condition.
+    - An alternative approach is to use the `SUM()` function instead.
+
+
+
