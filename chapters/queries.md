@@ -102,3 +102,17 @@
 - Runs a separate query inside your main query.
 - One advantage of using subqueries is that you don't have to join all the data together and perform a `DISTINCT` operation after trimming it down.
 
+## Common Table Expressions (CTEs)
+
+- Is a SQL statement that can be referenced within the context of a larger query.
+- `CTEs` are supported in MySQL 8.
+- `CTEs` allow queries to be broken down into smaller parts.
+- `CTEs` can be created using the `WITH` keyword.
+
+## Recursive CTEs
+
+- Recursive CTEs refer to themselves repeatedly to build up data.
+- We define a CTE using the `WITH` keyword and specify the `RECURSIVE` modifier.
+
+## Unions
+
