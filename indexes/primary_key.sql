@@ -1,0 +1,3 @@
+CREATE TABLE users (
+  ID BIGINT PRIMARY KEY,
+);

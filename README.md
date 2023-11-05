@@ -149,7 +149,29 @@ in the terminal.
 
 ### Schema migrations
 
+- Migrations are a folder full of SQL statements that help keep track of changes to your database schema.
+- Best practices for migrations:
+    - Always include explicit SQL statements to show how the database will move from one state to another.
+    - Avoid using down migrations.
+    - Utilize version control to keep track of changes to your schema over time.
+
 ## Indexes
+
+### Introduction
+
+- Indexing is the best way to ensure that your queries perform well.
+- Indexes are an entirely separate data structure that maintain a copy of part of your data.
+- When you create an index, it creates a second data structure, which is different from your primary data structure.
+- Each index maintains a copy of part of your data.
+- You should also create as few as you can get away with because creating too many indexes can impact the performance.
+- You have to examine your queries to determine which indexes will perform the best.
+- Indexing should be driven by access patterns.
+
+### Primary Keys
+
+- A primary key is a unique identifier for each row in the table.
+- A secondary key is any index that is not the primary key.
+- The primary key determines how your data is stored on disk.
 
 ## Queries
 
