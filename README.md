@@ -67,7 +67,27 @@ in the terminal.
 
 ### Binary Strings
 
+- The `BINARY` and `VARBINARY` columns store bytes only.
+- There is no character set or collation to be concerned about; it is just raw binary data.
+- The `BINARY` column is a fixed length column, while the `VARBINARY` column is a variable length column.
+- `BINARY` and `VARBINARY` columns in MySQL provide an efficient way to store binary data that may not have a valid string representation.
+- You can store `hash` and `UUID` data more compactly on disk, without the need for character sets and collations.
+
 ### Long Strings
+
+- `TEXT` and `BLOB` are used to store large amounts of text and binary data, respectively.
+- `TEXT` columns are used to store character data, such as strings of text.
+    - Text columns are **not indexable**.
+    - There are four types of text columns in MySQL: `TINYTEXT`, `TEXT`, `MEDIUMTEXT`, and `LONGTEXT`.
+    - As the name suggests, each type has a cap for the amount of data it can hold.
+- `BLOB` columns are used to store binary data.
+    - `BLOB` columns do not have a character set or a collation like `TEXT` columns do.
+    - There are four types of blob columns: `TINYBLOB`, `BLOB`, `MEDIUMBLOB`, and `LONGBLOB`.
+    - While `BLOB` columns can hold binary data such as images or audio files, it's not recommended to store them.
+- Best practices:
+    - Only select the columns that you need.
+    - Don't index or sort entire columns.
+    - Use `VARCHAR` columns for smaller amounts of data
 
 ### Enums
 
