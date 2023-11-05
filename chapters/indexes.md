@@ -1,4 +1,4 @@
-# Indexes
+# [Indexes](https://planetscale.com/learn/courses/mysql-for-developers/indexes)
 
 ## Introduction
 

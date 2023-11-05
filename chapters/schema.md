@@ -1,4 +1,4 @@
-# Schema
+# [Schema](https://planetscale.com/learn/courses/mysql-for-developers/schema)
 
 ## Introduction
 
