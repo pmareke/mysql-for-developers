@@ -127,7 +127,25 @@ in the terminal.
 
 ### Unexpected types
 
+- Booleans:
+    - MySQL doesn't actually have a native `BOOLEAN` type.
+    - Instead, MySQL uses a `TINYINT` column to simulate a boolean value.
+- IP addresses:
+    - MySQL has a built-in function `INET_ATON()` that converts an IPv4 address to an integer.
+    - `INET_NTOA()` to convert an integer back to an IP address.
+
 ### Generated columns
+
+- Generated columns are a way to make MySQL do more work on your behalf.
+- Created columns are based on other columns in your table.
+- They're computed by an expression, rather than being explicitly stored in the table.
+- Generated columns can be either virtual or stored.
+    - A virtual column is calculated at runtime.
+    - A stored column, on the other hand, is calculated during data insertion or update.
+- Use cases for generated columns:
+    - Extracting data from JSON objects.
+    - Performing calculations.
+    - Normalizing data.
 
 ### Schema migrations
 
