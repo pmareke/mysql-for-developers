@@ -173,6 +173,28 @@ in the terminal.
 - A secondary key is any index that is not the primary key.
 - The primary key determines how your data is stored on disk.
 
+### Secondary Keys
+
+- A secondary key is simply any index that is not the primary key of a table.
+- Every MySQL table has one primary key and can have multiple secondary keys.
+- Every secondary key has the primary key appended to it, as each leaf node in the secondary key contains a pointer back to the row.
+
+### Primary Key Data types
+
+- The recommended practice for primary keys is to use unsigned big integers.
+- Unsigned big integers provide virtually infinite room to grow.
+- Auto-incrementing preserves a natural order for the records.
+- Choosing a string data type, such as a `UUID` or a `GUID`, as a primary key can be tempting, but it has potential pitfalls.
+
+### Where to add indexes
+
+- Your queries should drive your indexes.
+- Do not create an index on every column.
+- The most basic use of an index is for direct access (`where`).
+- Indexes can also be used for unbounded and bounded ranges (`<=>`, `between`).
+- Indexes can also be used to sort rows instead of having MySQL do a full table scan (`sort`).
+- Indexes can also be used to group rows together for an aggregate function (`group by`).
+
 ## Queries
 
 ## Examples
