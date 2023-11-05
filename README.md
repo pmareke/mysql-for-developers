@@ -10,11 +10,11 @@ in the terminal.
 
 ## Chapters
 
-### [Schema](chapters/schema.md)
+- ### [Schema](chapters/schema.md)
 
-### [Indexes](chapters/indexes.md)
+- ### [Indexes](chapters/indexes.md)
 
-### [Queries](chapters/queries.md)
+- ### [Queries](chapters/queries.md)
 
-### [Examples](chapters/examples.md)
+- ### [Examples](chapters/examples.md)
 
