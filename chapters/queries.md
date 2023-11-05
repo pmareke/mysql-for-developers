@@ -65,4 +65,40 @@
 - Any changes you make to it make it more difficult to use an index effectively.
 - Move everything to the other side of the operator when possible.
 
+## Redundant and approximate conditions
+
+- Redundant conditions refer to query conditions that logically cannot change the result set.
+- The key benefit of redundant conditions lies in the fact that they help unlock indexes without any changes to the table.
+- Redundant and approximate conditions offer a powerful tool for optimizing database queries.
+
+## Limiting rows
+
+- If we want to count the number of rows in a table, we should not select all of the data and send it back to our application.
+- Calculations such as minimums, maximums, and averages should be done in the database instead of in our application.
+- Search for distinct values should be also be done in the database.
+- We should always put an `ORDER BY`, otherwise MySQL gets to decide how to order the rows, which can cause inconsistencies.
+
+## Joins
+
+- Inner Join:
+    - Takes the left table and the right table and matches them up together based on the criteria you specify.
+    - It only returns results that have a link in both tables.
+- Left Join:
+    - A left join returns all the records from the left table, and any matching records from the right table.
+- Right Join:
+    - A right join returns all the records from the right table, and any matching records from the left table.
+- Full outer joins:
+    - Which returns all rows from both tables, whether or not there's a match.
+    - **MySQL doesn't have this feature**.
+
+## Indexing joins
+
+- When MySQL joins tables together, it needs to figure out which rows from one table match which rows from the other table.
+- One way to do this is by doing a full table scan, which is slow and inefficient. The better way is to use an index on the related columns, which allows MySQL to quickly retrieve the matching rows and combine them.
+- By properly indexing the related columns between tables, you can significantly improve the performance of your queries.
+
+## Subqueries
+
+- Runs a separate query inside your main query.
+- One advantage of using subqueries is that you don't have to join all the data together and perform a `DISTINCT` operation after trimming it down.
 
