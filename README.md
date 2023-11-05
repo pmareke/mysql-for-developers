@@ -91,6 +91,18 @@ in the terminal.
 
 ### Enums
 
+- Enums are a special data type that allows you to specify a predefined list of allowable values for a column.
+- Enums look like strings, but under the hood, they're stored as integers.
+- An enum column has a predefined list of allowable values, and any attempt to enter a value outside this list will result in an error.
+- Using enums in MySQL has several benefits:
+    - Data validation: When attempting to enter an invalid value, an error is thrown.
+    - Readability.
+    - Compact data type.
+- There are some downsides too:
+    - Changes to the schema: To add another option to the allowable values, you'll have to alter the schema.
+    - Ordering: When sorting data using enums, MySQL sorts by the underlying integer value rather than the actual string.
+    - Using integer enums.
+
 ### Dates
 
 ### JSON
