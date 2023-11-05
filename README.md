@@ -221,6 +221,19 @@ in the terminal.
 
 ### Covering indexes
 
+- A covering index is a regular index that provides all the data required for a query without having to access the actual table.
+- They eliminate the need for the engine to access the actual table, saving a secondary traversal to gather the rest of the data.
+- For an index to be considered a covering index, it must have all the data needed for a particular query.
+    - The columns being selected.
+    - The columns being filtered on.
+    - The columns being used for sorting.
+
+### Functional indexes
+
+- Function-based indexes are used in cases where you need to create an index on a function rather than a column.
+- A function-based index is created by applying a function to one or more columns of a table, and then creating an index on the results of that function.
+- Function-based indexes are particularly useful in scenarios where the thing that you're trying to index is not a column, but rather the result of some set of operations or functions.
+
 ## Queries
 
 ## Examples
