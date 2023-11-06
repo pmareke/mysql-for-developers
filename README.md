@@ -16,5 +16,5 @@ in the terminal.
 
 - ### [Queries](chapters/queries.md)
 
-- ### [Examples](chapters/examples.md)
+- ### [Examples](examples/)
 
