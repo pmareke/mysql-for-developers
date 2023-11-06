@@ -9,8 +9,6 @@ INSERT INTO urls (url) VALUES ('www.google.com'), ('specific_value');
 
 SELECT * FROM urls WHERE url = 'specific_value';
 
-SELECT * FROM urls WHERE url = 'specific_value';
-
 SHOW INDEXES FROM urls;
 
 SELECT * FROM urls WHERE url_md5 = MD5('specific_value');
